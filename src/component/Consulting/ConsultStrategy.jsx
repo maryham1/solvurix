@@ -39,7 +39,7 @@ function ConsultStrategy() {
           secondary Services
         </h4>
       </div>
-      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl t">
+      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl animate-radialColor transition-all duration-300 ease-in-out">
         Strategic Consulting
       </p>
       <p className="text-md text-gray-600 laptop:text-[22px] tablet:text-[20px]">

@@ -29,11 +29,14 @@ function ProductDev() {
     threshold: 0.3,
   });
   return (
-    <div className={`${
+    <div
+      className={`${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-      } transition-all duration-700 ease-out space-y-3 w-auto laptop:w-[800px] laptop:space-y-7  tablet:space-y-5`} ref={ref}>
+      } transition-all duration-700 ease-out space-y-3 w-auto laptop:w-[800px] laptop:space-y-7  tablet:space-y-5`}
+      ref={ref}
+    >
       <div className="flex gap-1 items-center pl-5">
-        <div className="bg-blue-600  w-[10px] h-[10px] rounded-full"></div>
+        <div className="bg-blue-600  w-[10px] h-[10px] rounded-full animate-radialColor transition-all duration-700 ease-in-out"></div>
         <h4 className=" text-blue-600 uppercase text-sm laptop:text-lg tablet:text-md">
           primary focus
         </h4>

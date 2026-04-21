@@ -3,15 +3,16 @@ import {
   BiShieldQuarter,
   BiSolidCloudUpload,
 } from "react-icons/bi";
+import { FaRobot } from "react-icons/fa";
 
-import { MdLightbulb, MdLightbulbOutline } from "react-icons/md";
+import { MdLightbulb, MdLightbulbOutline, MdSmartToy } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
 
 const technology = [
   {
     name: "Artificial Intelligence",
     info: "Machine learning, deep learning, and intelligent automation",
-    icon: <BiShieldQuarter className="text-5xl text-white" />,
+    icon: <FaRobot className="text-5xl text-blue-600" />,
   },
   {
     name: "Cloud-Native",

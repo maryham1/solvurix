@@ -77,7 +77,7 @@ function Flagship() {
                 {flg.icon}
               </figure>
               <div className="flex gap-2 border py-1 px-6 border-gray-200 rounded-full border-[1px] items-center">
-                <div className="w-[7px] h-[7px] rounded-full  p-1 bg-blue-600"></div>
+                <div className="w-[7px] h-[7px] rounded-full  p-1 bg-blue-600 animate-radialColor transition-all duration-300 ease-in-out"></div>
                 <p className="text-blue-600 uppercase text-sm font-semibold">
                   {flg.categoryName}
                 </p>

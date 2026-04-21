@@ -3,7 +3,8 @@
   --animate-floatIn: floatIn 0.7s ease-out forwards;
   --animate-float1: float1 4s ease-in-out infinite;
   --animate-radial: radialPulse 4s ease-in-out infinite;
---animate-slide-in-left: slideInLeft 0.7s ease-out forwards;
+  --animate-radialColor: radialColor 4s ease-in-out infinite;
+  --animate-slide-in-left: slideInLeft 0.7s ease-out forwards;
   --breakpoint-tablet: 640px; /*sm*/
   --breakpoint-laptop: 1024px; /*lg*/
   --breakpoint-desktop: 1028px; /*xl*/
@@ -46,14 +47,28 @@
 @keyframes radialPulse {
   0% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.8;
   }
   50% {
-    transform: scale(1.2);
-    opacity: 0.3;
+    transform: scale(1.5);
+    opacity: 0.5;
   }
   100% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.8;
+  }
+}
+@keyframes radialColor {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
   }
 }

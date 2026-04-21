@@ -11,7 +11,7 @@ import EmptyDiv from "./EmptyDiv";
 
 function HomePage() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* navbar */}
       <header>
         <Navbar />
@@ -33,7 +33,7 @@ function HomePage() {
       {/* Footer */}
       <Footer />
       <EmptyDiv />
-    </>
+    </div>
   );
 }
 

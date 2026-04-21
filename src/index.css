@@ -2,6 +2,8 @@
 @theme {
   --animate-floatIn: floatIn 0.7s ease-out forwards;
   --animate-float1: float1 4s ease-in-out infinite;
+  --animate-radial: radialPulse 4s ease-in-out infinite;
+
   --breakpoint-tablet: 640px; /*sm*/
   --breakpoint-laptop: 1024px; /*lg*/
   --breakpoint-desktop: 1028px; /*xl*/
@@ -24,9 +26,24 @@
 @keyframes float1 {
   0%,
   100% {
-    transform: translateY(40px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes radialPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
   }
 }

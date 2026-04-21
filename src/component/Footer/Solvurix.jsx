@@ -4,18 +4,18 @@ import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 
 function Solvurix() {
   return (
-    <div className="text-white w-auto space-y-3 laptop:w-[330px]">
+    <div className="text-white w-auto space-y-3 laptop:w-[330px] ">
       <div className="flex gap-2 items-center  ">
         <img
           src="\solvurix-company-logo.png"
-          className="w-[40px] h-[40px] laptop:w-[50px] laptop:w-[50px]"
+          className="w-[40px] h-[40px] laptop:w-[50px] laptop:h-[50px] tablet:w-[50px] tablet:h-[50px]"
         />
-        <h1 className="text-xl uppercase font-semibold laptop:text-2xl">
+        <h1 className="text-xl uppercase font-semibold laptop:text-2xl tablet:text-2xl">
           solvurix
         </h1>
       </div>
 
-      <p className="text-gray-300 text-md laptop:text-lg">
+      <p className="text-gray-300 text-md laptop:text-lg tablet:text-lg">
         Empowering People and businesses through innovative technology solutions
         and digital transformation.
       </p>

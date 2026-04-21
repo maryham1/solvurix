@@ -39,13 +39,13 @@ const flagships = [
 ];
 function Flagship() {
   return (
-    <section className="bg-gradient-to-r from-white to-blue-50/50  py-10 px-7 w-full laptop:px-20 laptop:py-20 ">
+    <section className="bg-gradient-to-r from-white to-blue-50/50  py-10 px-7 w-full laptop:px-20 laptop:py-20 tablet:px-15 tablet:py-15">
       <div className="flex flex-col justify-center items-center gap-10 laptop:gap-15">
-        <div className="text-center space-y-5 laptop:space-y-10">
-          <h1 className="text-[#0A192F] font-bold text-2xl laptop:text-6xl ">
+        <div className="text-center space-y-5 laptop:space-y-10 laptop:space-y-7">
+          <h1 className="text-[#0A192F] font-bold text-2xl laptop:text-6xl tablet:text-3xl">
             Our Flagship Products
           </h1>
-          <p className="text-md text-gray-600 laptop:text-2xl">
+          <p className="text-md text-gray-600 laptop:text-2xl tablet:text-xl">
             Intelligent platforms built to transform how businesses operate
           </p>
         </div>
@@ -53,7 +53,7 @@ function Flagship() {
           {flagships.map((flg) => (
             <div
               className=" transition-all duration-500  group relative bg-white p-6 flex flex-col justify-center items-center gap-4 laptop:p-8 laptop:gap-7
-                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[480px]"
+                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[480px] tablet:w-[480px]"
             >
               <div
                 className="absolute top-0 left-1/2 -translate-x-1/2 
@@ -62,7 +62,7 @@ function Flagship() {
              transition-all duration-300 
              group-hover:w-full"
               />
-              <figure className="transition-all duration-500 bg-gradient-to-r from-blue-600 to-[#0A192F] p-2 w-[70px] h-[70px] laptop:w-[100px] laptop:h-[100px] rounded-2xl flex items-center justify-center group-hover:scale-[1.07] group-hover:rotate-12   ">
+              <figure className="transition-all duration-500 bg-gradient-to-r from-blue-600 to-[#0A192F] p-2 w-[70px] h-[70px] laptop:w-[100px] laptop:h-[100px] tablet:w-[85px] tablet:h-[85px] rounded-2xl flex items-center justify-center group-hover:scale-[1.07] group-hover:rotate-12   ">
                 {flg.icon}
               </figure>
               <div className="flex gap-2 border py-1 px-6 border-gray-200 rounded-full border-[1px] items-center">
@@ -71,10 +71,10 @@ function Flagship() {
                   {flg.categoryName}
                 </p>
               </div>
-              <h1 className="font-semibold text-blue-600  text-xl laptop:text-2xl">
+              <h1 className="font-semibold text-blue-600  text-xl laptop:text-2xl tablet:text-2xl">
                 {flg.name}
               </h1>
-              <p className="text-gray-600 text-md text-center laptop:text-lg">
+              <p className="text-gray-600 text-md text-center laptop:text-lg tablet:text-lg">
                 {flg.info}
               </p>
               <FlagList flg={flg} />
@@ -82,8 +82,8 @@ function Flagship() {
             </div>
           ))}
         </div>
-        <button className="border border-[3px] border-black rounded-xl px-8 py-4 w-auto laptop:w-[280px] laptop:px-5 laptop:py-5">
-          <a className="text-md capitalize font-semibold outline-0 laptop:tex-xl">
+        <button className="border border-[3px] border-black rounded-xl px-8 py-4 w-auto laptop:w-[280px] tablet:w-[280px] tablet:px-5 tablet:py-5 laptop:px-5 laptop:py-5">
+          <a className="text-md capitalize font-semibold outline-0 laptop:tex-xl tablet:text-xl">
             view all product &rarr;
           </a>
         </button>

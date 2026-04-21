@@ -1,10 +1,10 @@
 function Resources() {
   return (
     <div className="space-y-5">
-      <h4 className="text-white text-xl laptop:text-2xl capitalize font-semibold ">
+      <h4 className="text-white text-xl laptop:text-2xl capitalize font-semibold tablet:text-2xl">
         Resources
       </h4>
-      <ul className="text-gray-300 space-y-4 text-md laptop:text-lg hover:text-blue-600">
+      <ul className="text-gray-300 space-y-4 text-md laptop:text-lg hover:text-blue-600 tablet:text-lg">
         <li>Blog </li>
         <li>Case Studies</li>
         <li>Whitepapers</li>

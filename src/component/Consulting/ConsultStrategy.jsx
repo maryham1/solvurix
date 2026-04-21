@@ -21,17 +21,17 @@ const consults = [
 
 function ConsultStrategy() {
   return (
-    <div className="space-y-3 w-auto order-1 laptop:order-2 laptop:w-[800px] laptop:space-y-7">
+    <div className="space-y-3 w-auto order-1 laptop:order-2 laptop:w-[800px] laptop:space-y-7 tablet:space-y-5">
       <div className="flex gap-2 items-center pl-5">
         <div className="bg-black  w-[10px] h-[10px] rounded-full"></div>
-        <h4 className=" text-black uppercase text-sm laptop:text-lg">
+        <h4 className=" text-black uppercase text-sm laptop:text-lg tablet:text-lg">
           secondary Services
         </h4>
       </div>
-      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl">
+      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl t">
         Strategic Consulting
       </p>
-      <p className="text-md text-gray-600 laptop:text-[22px]">
+      <p className="text-md text-gray-600 laptop:text-[22px] tablet:text-[20px]">
         We partner with teams to navigate transformation, modernize stacks, and
         architect platforms that accelerate strategic outcomes.
       </p>
@@ -40,10 +40,10 @@ function ConsultStrategy() {
           <li className="flex gap-6 items-center ">
             {consult.icon}
             <div className="">
-              <h4 className="font-semibold text-sm  laptop:text-xl">
+              <h4 className="font-semibold text-sm  laptop:text-xl tablet:text-lg">
                 {consult.topic}
               </h4>
-              <p className="text-gray-600 text-sm laptop:text-lg">
+              <p className="text-gray-600 text-sm laptop:text-lg tablet:text-lg">
                 {consult.info}
               </p>
             </div>

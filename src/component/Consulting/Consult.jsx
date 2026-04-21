@@ -3,7 +3,7 @@ import ConsultStrategy from "./ConsultStrategy";
 
 function Consult() {
   return (
-    <section className="w-full py-10 px-7 bg-white mt-20 laptop:px-20 py-20 laptop:mt-72">
+    <section className="w-full py-10 px-7 bg-white mt-20 laptop:px-20 laptop:py-20 tablet:px-15 tablet:px-15 laptop:mt-72 tablet:mt-[550px]">
       <div className="flex flex-col gap-15 justify-normal items-center laptop:flex-row laptop:justify-between">
         <ConsultingImage />
         <ConsultStrategy />

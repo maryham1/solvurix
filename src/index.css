@@ -1,8 +1,32 @@
 @import "tailwindcss";
 @theme {
+  --animate-floatIn: floatIn 0.7s ease-out forwards;
+  --animate-float1: float1 4s ease-in-out infinite;
   --breakpoint-tablet: 640px; /*sm*/
   --breakpoint-laptop: 1024px; /*lg*/
   --breakpoint-desktop: 1028px; /*xl*/
   --breakpoint-mobile: 0px; /*default*/
   --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }

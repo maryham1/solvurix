@@ -7,6 +7,7 @@ function NavList({ showMenu, setShowMenu }) {
           : "hidden"
       } 
     text-xl
+    
     laptop:flex laptop:flex-row laptop:relative laptop:bg-transparent  laptop:w-auto
     z-50 items-start laptop:items-center justify-between gap-5
   `}

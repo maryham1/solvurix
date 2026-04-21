@@ -1,5 +1,6 @@
 import { FaHammer, FaPuzzlePiece } from "react-icons/fa";
 import { MdLightbulb, MdLightbulbOutline } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 const principles = [
   {
@@ -19,8 +20,18 @@ const principles = [
   },
 ];
 function Core() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section className="bg-blue-50/50  py-10 px-7 w-full laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15">
+    <section
+      className={`${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+      } transition-all duration-700 ease-out bg-blue-50/50  py-10 px-7 w-full laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15`}
+      ref={ref}
+    >
       <div className="flex flex-col justify-center items-center gap-10">
         <div className="text-center">
           <h1 className="text-[#0A192F] font-bold text-3xl laptop:text-6xl tablet:text-4xl">
@@ -33,7 +44,14 @@ function Core() {
         </div>
         <div className="flex flex-col gap-10 laptop:flex-row laptop:flex-nowrap tablet:flex-row tablet:flex-wrap">
           {principles.map((prp) => (
-            <div className="bg-white p-8 space-y-5 w-auto h-auto m-auto rounded-2xl shadow-lg laptop:w-[460px] laptop:h-[320px] tablet:w-[400px] tablet:h-[320px]">
+            <div
+              className={`bg-white p-8 space-y-5 w-auto h-auto m-auto rounded-2xl shadow-lg laptop:w-[400px] laptop:h-[320px] tablet:w-[400px] tablet:h-[320px] ${
+                inView
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-20 "
+              } transition-all duration-700 ease-out`}
+              ref={ref}
+            >
               <figure className="bg-gradient-to-r from-blue-600 to-[#0A192F] p-2 w-[70px] h-[70px] laptop:w-[70px] laptop:h-[70px] tablet:w-[60px] tablet:h-[60px] laptop:p-2 tablet:p-2 rounded-2xl flex items-center justify-center">
                 {prp.icon}
               </figure>

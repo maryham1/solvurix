@@ -5,6 +5,7 @@ import {
 } from "react-icons/bi";
 
 import { MdLightbulb, MdLightbulbOutline } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 const technology = [
   {
@@ -29,8 +30,18 @@ const technology = [
   },
 ];
 function Technology() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section className="bg-blue-50/50  py-10 px-7 w-full laptop:px-2 laptop:py-20 tablet:px-15 tablet:py-15">
+    <section
+      className={` ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+      } transition-all duration-700 ease-out bg-blue-50/50  py-10 px-7 w-full laptop:px-2 laptop:py-20 tablet:px-15 tablet:py-15`}
+      ref={ref}
+    >
       <div className="flex flex-col justify-center items-center gap-10">
         <div className="text-center space-y-5 laptop:space-y-10 tablet:space-y-7">
           <h1 className="text-[#0A192F] font-bold text-2xl capitalize laptop:text-6xl tablet:text-3xl">
@@ -42,7 +53,14 @@ function Technology() {
         </div>
         <div className="flex flex-col gap-10 laptop:flex-row tablet:gap-7">
           {technology.map((tech) => (
-            <div className=" flex flex-col gap-3 justify-center items-center m-auto rounded-2xl  laptop:gap-5 tablet:gap-5">
+            <div
+              className={` ${
+                inView
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-20 "
+              } transition-all duration-700 ease-out flex flex-col gap-3 justify-center items-center m-auto rounded-2xl  laptop:gap-5 tablet:gap-5`}
+              ref={ref}
+            >
               <figure className="bg-white p-2 w-[100px] h-[100px] rounded-2xl flex items-center justify-center shadow-md hover:scale-[1.1]">
                 {tech.icon}
               </figure>

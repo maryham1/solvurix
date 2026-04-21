@@ -1,6 +1,7 @@
 import { FaBrain, FaCloud, FaCog } from "react-icons/fa";
 import FlagList from "./FlagList";
 import LearnMoreBtn from "./LearnMoreBtn";
+import { useInView } from "react-intersection-observer";
 
 const flagships = [
   {
@@ -38,8 +39,18 @@ const flagships = [
   },
 ];
 function Flagship() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section className="bg-gradient-to-r from-white to-blue-50/50  py-10 px-7 w-full laptop:px-20 laptop:py-20 tablet:px-15 tablet:py-15">
+    <section
+      className={` ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+      } transition-all duration-700 ease-out bg-gradient-to-r from-white to-blue-50/50  py-10 px-7 w-full laptop:px-20 laptop:py-20 tablet:px-15 tablet:py-15`}
+      ref={ref}
+    >
       <div className="flex flex-col justify-center items-center gap-10 laptop:gap-15">
         <div className="text-center space-y-5 laptop:space-y-10 laptop:space-y-7">
           <h1 className="text-[#0A192F] font-bold text-2xl laptop:text-6xl tablet:text-3xl">

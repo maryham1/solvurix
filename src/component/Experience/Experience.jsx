@@ -1,10 +1,21 @@
 import Button from "../Herosection/Button";
 import { LuPackage } from "react-icons/lu";
 import { FaComment } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 function Experience() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section className="bg-gradient-to-r from-blue-900 to-[#0A192F] w-full  py-10 px-7 laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15">
+    <section
+      className={`${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+      } transition-all duration-700 ease-out bg-gradient-to-r from-blue-900 to-[#0A192F] w-full  py-10 px-7 laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15`}
+      ref={ref}
+    >
       <div className="flex flex-col justify-center items-center gap-7 laptop:gap-10 tablet:gap-10">
         <div className="text-center space-y-5 laptop:space-y-10 tablet:space-y-7">
           <h1 className="text-white font-bold text-2xl capitalize laptop:text-6xl tablet:text-3xl">

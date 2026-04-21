@@ -1,10 +1,20 @@
 import Circle from "./Circle";
 import ProductDev from "./ProductDev";
 import ProductImage from "./ProductImage";
+import { useInView } from "react-intersection-observer";
 
 function Product() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
-    <section className="w-full py-10 px-7 bg-white w-full laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15">
+    <section
+      ref={ref}
+      className={`${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      } w-full py-10 px-7 bg-white laptop:py-20 laptop:px-20 tablet:px-15 tablet:py-15 transition-all duration-700`}
+    >
       <div className="flex flex-col gap-10 text-black relative">
         <div className="text-center flex flex-col gap-2 items-center laptop:gap-5 tablet:gap-5">
           <h1 className="text-[#0A192F] text-3xl font-bold laptop:text-7xl tablet:text-5xl">

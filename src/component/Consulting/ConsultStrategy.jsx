@@ -1,5 +1,6 @@
 import { BiCode, BiCompass } from "react-icons/bi";
 import { FiRefreshCw } from "react-icons/fi";
+import { useInView } from "react-intersection-observer";
 
 const consults = [
   {
@@ -20,8 +21,18 @@ const consults = [
 ];
 
 function ConsultStrategy() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <div className="space-y-3 w-auto order-1 laptop:order-2 laptop:w-[800px] laptop:space-y-7 tablet:space-y-5">
+    <div
+      className={`${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+      } transition-all duration-700 ease-out space-y-3 w-auto order-1 laptop:order-2 laptop:w-[800px] laptop:space-y-7 tablet:space-y-5`}
+      ref={ref}
+    >
       <div className="flex gap-2 items-center pl-5">
         <div className="bg-black  w-[10px] h-[10px] rounded-full"></div>
         <h4 className=" text-black uppercase text-sm laptop:text-lg tablet:text-lg">

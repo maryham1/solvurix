@@ -3,12 +3,22 @@
   --animate-floatIn: floatIn 0.7s ease-out forwards;
   --animate-float1: float1 4s ease-in-out infinite;
   --animate-radial: radialPulse 4s ease-in-out infinite;
-
+--animate-slide-in-left: slideInLeft 0.7s ease-out forwards;
   --breakpoint-tablet: 640px; /*sm*/
   --breakpoint-laptop: 1024px; /*lg*/
   --breakpoint-desktop: 1028px; /*xl*/
   --breakpoint-mobile: 0px; /*default*/
   --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes floatIn {

@@ -1,0 +1,60 @@
+import { BiCode, BiCompass } from "react-icons/bi";
+import { FiRefreshCw } from "react-icons/fi";
+
+const consults = [
+  {
+    topic: "Technology Advisory",
+    info: "Strategic evaluation of platforms, tools, and modernization paths.",
+    icon: <BiCompass className="text-black text-3xl" />,
+  },
+  {
+    topic: "Custom Development",
+    info: "Tailored engineering for unique workflows & domain challenges.",
+    icon: <BiCode className="text-black text-3xl" />,
+  },
+  {
+    topic: "Digital Transformation",
+    info: "End-to-end modernization: automation, integration, observability.",
+    icon: <FiRefreshCw className="text-black text-3xl" />,
+  },
+];
+
+function ConsultStrategy() {
+  return (
+    <div className="space-y-3 w-auto order-1 laptop:order-2 laptop:w-[800px] laptop:space-y-7">
+      <div className="flex gap-2 items-center pl-5">
+        <div className="bg-black  w-[10px] h-[10px] rounded-full"></div>
+        <h4 className=" text-black uppercase text-sm laptop:text-lg">
+          secondary Services
+        </h4>
+      </div>
+      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl">
+        Strategic Consulting
+      </p>
+      <p className="text-md text-gray-600 laptop:text-[22px]">
+        We partner with teams to navigate transformation, modernize stacks, and
+        architect platforms that accelerate strategic outcomes.
+      </p>
+      <ul className="flex flex-col gap-5 pl-0 laptop:pl-10 laptop:gap-7">
+        {consults.map((consult) => (
+          <li className="flex gap-6 items-center ">
+            {consult.icon}
+            <div className="">
+              <h4 className="font-semibold text-sm  laptop:text-xl">
+                {consult.topic}
+              </h4>
+              <p className="text-gray-600 text-sm laptop:text-lg">
+                {consult.info}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p className="text-lg font-semibold cursor-pointer laptop:text-xl">
+        Discuss Roadmap &rarr;
+      </p>
+    </div>
+  );
+}
+
+export default ConsultStrategy;

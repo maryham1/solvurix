@@ -34,12 +34,12 @@ function ConsultStrategy() {
       ref={ref}
     >
       <div className="flex gap-2 items-center pl-5">
-        <div className="bg-black  w-[10px] h-[10px] rounded-full"></div>
+        <div className="bg-black  w-[10px] h-[10px] rounded-full animate-radialColor transition-all duration-300 ease-in-out"></div>
         <h4 className=" text-black uppercase text-sm laptop:text-lg tablet:text-lg">
           secondary Services
         </h4>
       </div>
-      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl animate-radialColor transition-all duration-300 ease-in-out">
+      <p className="text-black capitalize text-3xl font-semibold laptop:text-4xl ">
         Strategic Consulting
       </p>
       <p className="text-md text-gray-600 laptop:text-[22px] tablet:text-[20px]">

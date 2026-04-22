@@ -17,19 +17,21 @@ function HomePage() {
         <Navbar />
       </header>
       {/* hero-section */}
-      <Herosection />
-      {/* product developement */}
-      <Product />
-      {/* consult strategy */}
-      <Consult />
-      {/* core principles */}
-      <Core />
-      {/* flagship */}
-      <Flagship />
-      {/* Technology */}
-      <Technology />
-      {/* Experience */}
-      <Experience />
+      <main>
+        <Herosection />
+        {/* product developement */}
+        <Product />
+        {/* consult strategy */}
+        <Consult />
+        {/* core principles */}
+        <Core />
+        {/* flagship */}
+        <Flagship />
+        {/* Technology */}
+        <Technology />
+        {/* Experience */}
+        <Experience />
+      </main>
       {/* Footer */}
       <Footer />
       <EmptyDiv />

@@ -63,8 +63,13 @@ function Flagship() {
         <div className="flex flex-col gap-10  laptop:flex-row">
           {flagships.map((flg) => (
             <div
-              className=" transition-all duration-500  group relative bg-white p-6 flex flex-col justify-center items-center gap-4 laptop:p-8 laptop:gap-7
-                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[400px] tablet:w-[480px]"
+              className={` ${
+                inView
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-20 "
+              } transition-all duration-700 ease-out transition-all duration-500  group relative bg-white p-6 flex flex-col justify-center items-center gap-4 laptop:p-8 laptop:gap-7
+                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[360px] tablet:w-[480px]`}
+              ref={ref}
             >
               <div
                 className="absolute top-0 left-1/2 -translate-x-1/2 
@@ -93,11 +98,20 @@ function Flagship() {
             </div>
           ))}
         </div>
-        <button className="border border-[3px] border-black rounded-xl px-8 py-4 w-auto laptop:w-[280px] tablet:w-[280px] tablet:px-5 tablet:py-5 laptop:px-5 laptop:py-5">
-          <a className="text-md capitalize font-semibold outline-0 laptop:tex-xl tablet:text-xl">
-            view all product &rarr;
-          </a>
-        </button>
+        <div
+          className={` ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20 "
+          } transition-all duration-700 ease-out `}
+          ref={ref}
+        >
+          <button
+            className={`border border-[3px] border-black rounded-xl px-8 py-4 w-auto laptop:w-[280px] tablet:w-[280px] tablet:px-5 tablet:py-5 laptop:px-5 laptop:py-5`}
+          >
+            <a className="text-md capitalize font-semibold outline-0 laptop:tex-xl tablet:text-xl">
+              view all product &rarr;
+            </a>
+          </button>
+        </div>
       </div>
     </section>
   );

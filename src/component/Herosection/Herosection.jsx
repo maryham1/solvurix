@@ -3,7 +3,7 @@ import Intro from "./Intro";
 
 function Herosection() {
   return (
-    <section className="bg-gradient-to-r overflow-x-hidden from-blue-900 to-[#0A192F] px-7 py-35 w-full  laptop:bg-[#06152d] laptop:bg-none tablet:bg-[#06152d] tablet:bg-none tablet:px-15 tablet-py-20  laptop:px-20 laptop:py-40">
+    <section className=" overflow-x-hidden  bg-[#0A192F] px-7 py-35 w-full   tablet:px-15 tablet-py-20  laptop:px-20 laptop:py-40">
       <div className="flex justify-normal items-center laptop:justify-between">
         <Intro />
         <CompanyLogo />

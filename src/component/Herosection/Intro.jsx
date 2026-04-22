@@ -9,10 +9,10 @@ function Intro() {
         Building the{" "}
         <span className="text-blue-600 ">Future of Technology</span>
       </h1>
-      <p className="text-[15px] laptop:text-[27px] tablet:text-[20px]">
+      <p className="text-[15px] laptop:text-[27px] text-center laptop:text-left tablet:text-left tablet:text-[20px]">
         Creating intelligent, future-ready solutions for real-world challenges.
       </p>
-      <p className="text-sm laptop:text-xl tablet:text-lg">
+      <p className="text-sm text-center laptop:text-left tablet:text-left laptop:text-xl tablet:text-lg">
         Innovate. Build. Solve.
       </p>
       <div className="flex  flex-col gap-5 laptop:flex-row laptop:gap-10 tablet:flex-row  ">

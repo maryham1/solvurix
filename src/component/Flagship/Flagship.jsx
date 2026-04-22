@@ -64,7 +64,7 @@ function Flagship() {
           {flagships.map((flg) => (
             <div
               className=" transition-all duration-500  group relative bg-white p-6 flex flex-col justify-center items-center gap-4 laptop:p-8 laptop:gap-7
-                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[480px] tablet:w-[480px]"
+                w-auto h-auto m-auto rounded-2xl shadow-lg hover:scale-[1.05] laptop:w-[420px] tablet:w-[480px]"
             >
               <div
                 className="absolute top-0 left-1/2 -translate-x-1/2 
